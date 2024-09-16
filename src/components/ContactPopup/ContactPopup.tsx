@@ -41,16 +41,16 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose, onSubmit, mode, co
       <div className="popup">
         <h2>{mode === 'add' ? 'Add new contact' : 'Edit contact'}</h2>
         <div className="form-group">
-          <label>First name:</label>
-          <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          <label htmlFor='first-name'>First name:</label>
+          <input id='first-name' type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         </div>
         <div className="form-group">
-          <label>Last name:</label>
-          <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+          <label htmlFor='last-name'>Last name:</label>
+          <input id='last-name' type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
         </div>
         <div className="form-group">
-          <label>Group:</label>
-          <select value={group} onChange={(e) => setGroup(e.target.value)}>
+          <label htmlFor='group'>Group:</label>
+          <select id='group' value={group} onChange={(e) => setGroup(e.target.value)}>
             <option value="friends">friends</option>
             <option value="family">family</option>
             <option value="work">work</option>

@@ -19,16 +19,17 @@ const AdvancedFilterPopup: React.FC<AdvancedFilterPopupProps> = ({ onClose, onFi
       <div className="popup">
         <h2>Advanced filter</h2>
         <div className="form-group">
-          <label>Name filter:</label>
-          <input 
+          <label htmlFor='name-filter'>Name filter:</label>
+          <input
+            id="name-filter" 
             type="text" 
             value={nameFilter} 
             onChange={(e) => setNameFilter(e.target.value)} 
           />
         </div>
         <div className="form-group">
-          <label>Group select:</label>
-          <select value={groupFilter} onChange={(e) => setGroupFilter(e.target.value)}>
+          <label htmlFor='group-select'>Group select:</label>
+          <select id='group-select' value={groupFilter} onChange={(e) => setGroupFilter(e.target.value)}>
             <option value="all">all</option>
             <option value="friends">friends</option>
             <option value="family">family</option>
